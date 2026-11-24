@@ -1,0 +1,19 @@
+---
+- name: Loops and conditionals
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    create_dirs: true
+    dirs:
+      - /tmp/ansible-academy/a
+      - /tmp/ansible-academy/b
+      - /tmp/ansible-academy/c
+  tasks:
+    - name: Create directories when enabled
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0755"
+      loop: "{{ dirs }}"
+      when: create_dirs | bool

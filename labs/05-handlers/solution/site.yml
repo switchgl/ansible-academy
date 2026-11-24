@@ -1,0 +1,16 @@
+---
+- name: Config with handler
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Write config
+      ansible.builtin.copy:
+        dest: /tmp/ansible-academy/app.conf
+        content: "version=1\n"
+        mode: "0644"
+      notify: Restart app
+  handlers:
+    - name: Restart app
+      ansible.builtin.debug:
+        msg: "Pretending to restart the application"
