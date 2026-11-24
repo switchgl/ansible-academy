@@ -1,0 +1,4 @@
+---
+- name: Config changed
+  ansible.builtin.debug:
+    msg: "Configuration for {{ service_name }} has changed"

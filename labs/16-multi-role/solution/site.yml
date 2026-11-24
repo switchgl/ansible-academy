@@ -1,0 +1,8 @@
+---
+- name: Compose application roles
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - app
+    - config

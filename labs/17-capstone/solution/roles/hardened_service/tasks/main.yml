@@ -1,0 +1,17 @@
+---
+- name: Assert safe port
+  ansible.builtin.assert:
+    that:
+      - listen_port | int > 1024
+    fail_msg: "Port must be unprivileged"
+- name: Create service directory
+  ansible.builtin.file:
+    path: /tmp/ansible-academy/service
+    state: directory
+    mode: "0755"
+- name: Render service config
+  ansible.builtin.template:
+    src: service.conf.j2
+    dest: /tmp/ansible-academy/service/service.conf
+    mode: "0644"
+  notify: Config changed

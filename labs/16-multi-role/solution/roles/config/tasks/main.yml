@@ -1,0 +1,6 @@
+---
+- name: Render config
+  ansible.builtin.template:
+    src: app.conf.j2
+    dest: /tmp/ansible-academy/app/app.conf
+    mode: "0644"

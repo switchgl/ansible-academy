@@ -1,0 +1,6 @@
+---
+- name: Create app directory
+  ansible.builtin.file:
+    path: /tmp/ansible-academy/app
+    state: directory
+    mode: "0755"
