@@ -1,0 +1,13 @@
+---
+- name: Use custom module
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Echo a message
+      academy_echo:
+        message: "Custom module works offline"
+      register: result
+    - name: Show result
+      ansible.builtin.debug:
+        var: result.echoed

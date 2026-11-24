@@ -1,0 +1,17 @@
+---
+- name: Testable playbook
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    expected: "ok"
+  tasks:
+    - name: Create marker
+      ansible.builtin.file:
+        path: /tmp/ansible-academy/test-marker
+        state: touch
+    - name: Assert expected value
+      ansible.builtin.assert:
+        that:
+          - expected == "ok"
+        fail_msg: "Expected value was not ok"

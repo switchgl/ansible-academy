@@ -1,0 +1,12 @@
+---
+- name: Demonstrate become
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Create a directory that would normally need root
+      ansible.builtin.file:
+        path: /tmp/ansible-academy/root-owned
+        state: directory
+        mode: "0755"
+      become: true

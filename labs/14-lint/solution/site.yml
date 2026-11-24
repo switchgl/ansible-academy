@@ -1,0 +1,11 @@
+---
+- name: Clean playbook
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Create a marker
+      ansible.builtin.file:
+        path: /tmp/ansible-academy/lint-ok
+        state: touch
+        mode: "0644"

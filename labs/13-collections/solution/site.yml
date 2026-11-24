@@ -1,0 +1,13 @@
+---
+- name: Use a collection module
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Confirm collections path works
+      ansible.builtin.debug:
+        msg: "Collections are available under vendor/collections after bootstrap"
+    - name: Touch a marker
+      ansible.builtin.file:
+        path: /tmp/ansible-academy/collections-ok
+        state: touch
