@@ -1,0 +1,26 @@
+{
+  "tracks": [
+    {"id": "beginner", "title": "Beginner", "summary": "Playbooks, variables, inventory, modules, handlers, loops."},
+    {"id": "intermediate", "title": "Intermediate", "summary": "Roles, templates, vault, error handling, become, custom modules."},
+    {"id": "advanced", "title": "Advanced", "summary": "Collections, linting, testing, multi-role apps, production patterns."}
+  ],
+  "labs": [
+    {"id": "01-hello-playbook", "track": "beginner", "title": "Hello playbook", "duration": "20 min", "concepts": ["play", "task", "debug"]},
+    {"id": "02-variables-facts", "track": "beginner", "title": "Variables and facts", "duration": "25 min", "concepts": ["vars", "facts"]},
+    {"id": "03-inventory", "track": "beginner", "title": "Inventory and groups", "duration": "25 min", "concepts": ["inventory"]},
+    {"id": "04-modules", "track": "beginner", "title": "Common modules", "duration": "30 min", "concepts": ["file", "copy"]},
+    {"id": "05-handlers", "track": "beginner", "title": "Handlers", "duration": "25 min", "concepts": ["notify"]},
+    {"id": "06-loops-conditionals", "track": "beginner", "title": "Loops and conditionals", "duration": "30 min", "concepts": ["loop", "when"]},
+    {"id": "07-roles", "track": "intermediate", "title": "Roles", "duration": "40 min", "concepts": ["role"]},
+    {"id": "08-templates", "track": "intermediate", "title": "Jinja2 templates", "duration": "35 min", "concepts": ["template"]},
+    {"id": "09-vault", "track": "intermediate", "title": "Ansible Vault", "duration": "30 min", "concepts": ["vault"]},
+    {"id": "10-blocks", "track": "intermediate", "title": "Blocks and error handling", "duration": "30 min", "concepts": ["block"]},
+    {"id": "11-become", "track": "intermediate", "title": "Privilege escalation", "duration": "25 min", "concepts": ["become"]},
+    {"id": "12-custom-module", "track": "intermediate", "title": "Simple custom module", "duration": "40 min", "concepts": ["module"]},
+    {"id": "13-collections", "track": "advanced", "title": "Collections offline", "duration": "30 min", "concepts": ["collection"]},
+    {"id": "14-lint", "track": "advanced", "title": "ansible-lint", "duration": "25 min", "concepts": ["lint"]},
+    {"id": "15-testing", "track": "advanced", "title": "Local testing patterns", "duration": "35 min", "concepts": ["test"]},
+    {"id": "16-multi-role", "track": "advanced", "title": "Multi-role application", "duration": "50 min", "concepts": ["composition"]},
+    {"id": "17-capstone", "track": "advanced", "title": "Capstone: hardened service", "duration": "70 min", "concepts": ["role", "template"]}
+  ]
+}
