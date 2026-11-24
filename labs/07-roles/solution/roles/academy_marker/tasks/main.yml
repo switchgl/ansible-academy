@@ -1,0 +1,6 @@
+---
+- name: Create marker directory
+  ansible.builtin.file:
+    path: "{{ marker_path }}"
+    state: directory
+    mode: "0755"

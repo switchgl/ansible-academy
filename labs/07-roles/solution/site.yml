@@ -1,0 +1,7 @@
+---
+- name: Use the marker role
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - academy_marker

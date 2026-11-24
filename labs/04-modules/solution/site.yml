@@ -1,0 +1,16 @@
+---
+- name: Common modules
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Create academy directory
+      ansible.builtin.file:
+        path: /tmp/ansible-academy
+        state: directory
+        mode: "0755"
+    - name: Drop a marker file
+      ansible.builtin.copy:
+        dest: /tmp/ansible-academy/hello.txt
+        content: "Created by Ansible Academy\n"
+        mode: "0644"

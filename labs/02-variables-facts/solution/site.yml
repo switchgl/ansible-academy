@@ -1,0 +1,14 @@
+---
+- name: Variables and facts
+  hosts: localhost
+  connection: local
+  gather_facts: true
+  vars:
+    greeting: "Offline Ansible"
+  tasks:
+    - name: Show greeting
+      ansible.builtin.debug:
+        msg: "{{ greeting }}"
+    - name: Show OS family
+      ansible.builtin.debug:
+        msg: "Running on {{ ansible_os_family }}"
